@@ -9,7 +9,7 @@ app.use((req, res, next)=>{
   });
 const DB_URI = 'mongodb+srv://harshit24srivastava:Harshit-Result@result-application.mqgrbec.mongodb.net/test'
 mongoose.set('strictQuery',false);
-mongoose.connect(CUSTOMCONNSTR_MongodbConnectionString).then(()=>{
+mongoose.connect(process.env.CUSTOMCONNSTR_MongodbConnectionString).then(()=>{
     console.log('Connected to mongoDB');
 }).catch((err)=>{
     console.log('Failed to login please try again'+err);
