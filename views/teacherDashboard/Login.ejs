@@ -1,0 +1,33 @@
+<a href="/" class="btn btn-info" style="margin-top:5px;">Back</a>
+
+<div class="teachLog">
+  <span class="border border-info" style="background-color: gray;" >
+    <h3>Teacher Login</h3>
+    <form method="POST" class="teachForm" onsubmit="return validatePassword()">
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Enter Password :</label>
+        <input type="password" name="password" class="form-control" id="pass">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <script>
+      function validatePassword() {
+        const passwordField = document.getElementById('pass');
+        const password = passwordField.value.trim();
+      
+        if (!password) {
+          alert("Password is required.");
+          return false;
+        }
+      
+        
+        if (password!= "Harshit" ) {
+          alert("Incorrect Password.");
+          return false;
+        }
+      
+        return true;
+      }
+    </script>
+
+</div>

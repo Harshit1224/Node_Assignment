@@ -1,0 +1,26 @@
+<a href="/teacherDashboard/option" class="btn btn-info" style="margin-top:5px;">Back</a>
+<h4>Add Student-Result</h4>
+<form method="POST" class="addStu border border-info"  autocomplete="off">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Roll No. : </label>
+      <input type="number" name="roll" required class="form-control" id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name : </label>
+        <input type="text" name="name" required class="form-control" id="exampleInputEmail1" >
+      </div>
+      
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Date of Birth : </label>
+        <input type="date" name="dob" class="form-control" id="exampleInputEmail1" required max="<%= new Date().toISOString().split('T')[0] %>">
+        
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Score : </label>
+        <input type="number" name="score" required  min="0" max="100" class="form-control" id="exampleInputEmail1">
+        
+      </div>
+    <button type="submit" class="btn btn-success">Add</button>
+    <a href="/teacherDashboard/viewall" class="btn btn-primary">View All</a>
+</form>
+
